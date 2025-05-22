@@ -1,0 +1,429 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --dark: #1f2937;
+    --light: #f8f9fa;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--dark);
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--primary);
+}
+
+.cta-nav {
+    background-color: var(--primary);
+    color: white !important;
+    border-radius: 5px;
+}
+
+.cta-nav:hover {
+    background-color: var(--secondary);
+    color: white !important;
+}
+
+/* Burger Menu Styles */
+.burger {
+    display: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    color: var(--primary);
+    z-index: 1001;
+}
+
+.burger.toggle {
+    transform: rotate(90deg);
+}
+
+/* Prevent scrolling when menu is open */
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8rem 5% 5rem;
+    min-height: 90vh;
+    background-image: linear-gradient(to left, rgba(245, 246, 252, 0.52), rgba(240, 240, 240, 0.73)), url(images/workplace-office.jpg);
+    background-size: 100%;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text h2 span {
+    color: var(--primary);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Layanan */
+.layanan {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: white;
+}
+
+.layanan h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.layanan h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.layanan-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.layanan-card {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.layanan-card:hover {
+    transform: translateY(-10px);
+}
+
+.layanan-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Portfolio */
+.portfolio {
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.portfolio h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.portfolio-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.portfolio-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Testimoni */
+.testimoni {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: white;
+}
+
+.testimoni h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.testimoni h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.testimoni-card {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.testimoni-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.testimoni-card h4 {
+    color: var(--primary);
+    margin-top: 1rem;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 5rem 5%;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Kontak */
+.kontak {
+    padding: 5rem 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.kontak h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.kontak h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.kontak form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.kontak form input,
+.kontak form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.kontak form textarea {
+    height: 150px;
+}
+
+.kontak form button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.kontak form button:hover {
+    background-color: var(--secondary);
+}
+
+.kontak-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 2rem;
+    background-color: var(--light);
+    border-radius: 10px;
+}
+
+.kontak-info p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.kontak-info i {
+    margin-right: 1rem;
+    color: var(--primary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.social-media {
+    margin-bottom: 1rem;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--primary);
+}
+
+/* Animasi Scroll */
+.animate__animated {
+    opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: all 0.5s ease;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 6rem;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+}
